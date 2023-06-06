@@ -1,7 +1,6 @@
 import javax.security.auth.login.LoginException;
 
 import events.UserJoinedEvent;
-import events.UserLeftEvent;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -14,7 +13,7 @@ public final class Bot {
 
 	public static void main(String[] args) throws LoginException {
 		JDA bot = JDABuilder.createDefault(token).enableIntents(GatewayIntent.GUILD_MEMBERS).build();
-		bot.addEventListener(new UserJoinedEvent(), new UserLeftEvent());
+		bot.addEventListener(new UserJoinedEvent());
 
 	}
 
