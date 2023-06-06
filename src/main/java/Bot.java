@@ -1,6 +1,7 @@
 import javax.security.auth.login.LoginException;
 
-import events.UserJoinedEvent;
+import com.mico.synthesia.events.UserJoinedEvent;
+
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
