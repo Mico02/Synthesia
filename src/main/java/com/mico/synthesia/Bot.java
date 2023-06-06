@@ -1,3 +1,5 @@
+package com.mico.synthesia;
+
 import javax.security.auth.login.LoginException;
 
 import com.mico.synthesia.events.UserJoinedEvent;

@@ -11,8 +11,7 @@ public class UserJoinedEvent extends ListenerAdapter {
 		String newMemberName = e.getUser().getAsMention(); // Getting the new member name in for @NAME
 		String serverName = e.getGuild().getName(); // Getting the server name
 
-		TextChannel welcomeChannel = null; // Intializing a TextChannelß
-		;
+		TextChannel welcomeChannel = null; // Intializing a TextChannel
 		try {
 			// Sets welcomeChannel to the existing #welcome channel on the server
 			welcomeChannel = e.getGuild().getTextChannelsByName("welcome", true).get(0);
@@ -22,7 +21,6 @@ public class UserJoinedEvent extends ListenerAdapter {
 			 * welcomeChannel is set accordingly
 			 */
 			e.getGuild().createTextChannel("welcome").complete();
-			System.out.println("CAUGHT EXCEPTION");
 			welcomeChannel = e.getGuild().getTextChannelsByName("welcome", true).get(0);
 		}
 
