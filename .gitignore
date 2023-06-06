@@ -1,0 +1,14 @@
+/target/
+# Ignore all IDE setting directory
+/.settings
+
+# Ignore all env or .env files
+*.env
+env
+
+# Maven Files
+*.classpath
+*.project
+
+# Others
+*.DS_Store
