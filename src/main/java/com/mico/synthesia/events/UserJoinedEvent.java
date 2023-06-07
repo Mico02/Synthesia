@@ -21,7 +21,8 @@ public class UserJoinedEvent extends ListenerAdapter {
 			/*
 			 * If #welcome channel does not exist, then #welcome channel is created and put
 			 * in a welcome category. If welcome category does not exist, then one is
-			 * created.
+			 * created. Both the welcome category and channel have their positions set as
+			 * the top.
 			 */
 			Category welcomeCategory = (guild.getCategoriesByName("welcome", true).size() < 1)
 					? guild.createCategory("Welcome").complete()
