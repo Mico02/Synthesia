@@ -2,6 +2,7 @@ package com.mico.synthesia;
 
 import javax.security.auth.login.LoginException;
 
+import com.mico.synthesia.events.BotFirstJoinEvent;
 import com.mico.synthesia.events.UserJoinedEvent;
 
 import io.github.cdimascio.dotenv.Dotenv;
@@ -13,10 +14,11 @@ public final class Bot {
 
 	private static final Dotenv dotenv = Dotenv.configure().directory("./assets").filename("env").load();
 	private static final String token = dotenv.get("TOKEN");
+	public static final String botName = "Synthesia";
 
 	public static void main(String[] args) throws LoginException {
 		JDA bot = JDABuilder.createDefault(token).enableIntents(GatewayIntent.GUILD_MEMBERS).build();
-		bot.addEventListener(new UserJoinedEvent());
+		bot.addEventListener(new UserJoinedEvent(), new BotFirstJoinEvent());
 
 	}
 
